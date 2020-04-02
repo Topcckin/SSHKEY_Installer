@@ -13,9 +13,8 @@ cd ~
 mkdir .ssh
 cd .ssh
 curl https://github.com/$1.keys > authorized_keys
-chmod 700 authorized_keys
+chmod 600 authorized_keys
 cd ../
-chmod 600 .ssh
 cd /etc/ssh/
 
 sed -i "/PasswordAuthentication no/c PasswordAuthentication no" sshd_config
